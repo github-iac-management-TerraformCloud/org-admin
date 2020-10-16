@@ -16,7 +16,7 @@ resource "github_repository" "org_admin" {
 }
 
 # Set up baseline configs for the repo
-/*resource "github_branch_protection" "org_admin" {
+resource "github_branch_protection" "org_admin" {
   repository = github_repository.org_admin.name
   branch     = "main"
 
@@ -104,4 +104,4 @@ resource "github_team_repository" "events_repo_admin" {
   team_id    = github_team.team1.id
   repository = github_repository.events_repo.name
   permission = "admin"
-}*/
+}
